@@ -13,23 +13,12 @@ public class GuestList {
     private ArrayList<String> people;
     private SearchBehavior searchBehavior; 
 
-
     /**
-     * creates a default guest list
-     */
-    public GuestList() 
-    {
-        title = "default";
-        people = new ArrayList<String>();
-        searchBehavior = new LinearSearch();
-    }
-
-    /**
-     * creates a guest list with the indicated title
+     * creates a guest list
      * @param t the name of the guest list
      */
-    public GuestList(String t) {
-        title = t;
+    public GuestList(String title) {
+        this.title = title;
         people = new ArrayList<String>();
         searchBehavior = new LinearSearch();
     }
@@ -72,12 +61,12 @@ public class GuestList {
     }
 
     /**
-     * sets a new search behavior
+     * sets a new type of search behavior for the guest list
      * @param sb type of search behavior
      */
-    public void setSearchBehavior(SearchBehavior sb)
+    public void setSearchBehavior(SearchBehavior searchBehavior)
     {
-        searchBehavior = sb;
+       this.searchBehavior = searchBehavior;
     }
 
     /**

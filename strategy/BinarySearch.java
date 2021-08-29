@@ -1,5 +1,5 @@
 /**
- * creates a specific search behavior that implements a binary search
+ * creates a specific search behavior that utilizes a binary search algorithm
  * @author anna michelitch
  */
 
