@@ -47,7 +47,7 @@ public class BestSellers implements Subject {
 
     /**
      * adds a book to the best sellers list and notifies the observers
-     * @param book
+     * @param book the book to be added to the list
      */
     public void addBook(Book book) {
         bestSellers.add(book);
