@@ -1,5 +1,5 @@
 /**
- * builds a default potato head character without any features by extending the character class
+ * builds a default potato head character without any additional features
  * @author anna michelitch
  */
 
