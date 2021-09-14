@@ -1,8 +1,10 @@
 /**
  * Runs the Potoatoe Head Program
  */
-public class PotatoeDriver {
 
+package designer;
+
+public class PotatoeDriver {
     /**
      * Creates potatoe heads and adds features to them
      */

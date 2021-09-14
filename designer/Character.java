@@ -3,6 +3,8 @@
  * @author anna michelitch
  */
 
+ package designer;
+
 import java.util.*;
 
 public abstract class Character {

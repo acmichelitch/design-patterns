@@ -2,6 +2,9 @@
  * a type of CharacterDecorator that adds eyes to the PotatoeHead
  * @author anna michelitch
  */
+
+package designer;
+
 public class Eyes extends CharacterDecorator {
 
      /**

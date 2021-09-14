@@ -3,6 +3,8 @@
  * @author anna michelitch
  */
 
+package designer;
+
 public class Nose extends CharacterDecorator {
     
     /**

@@ -3,6 +3,8 @@
  * @author anna michelitch
  */
 
+package designer;
+
 public abstract class CharacterDecorator extends Character {
    
     protected Character character;

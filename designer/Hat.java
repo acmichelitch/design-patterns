@@ -3,6 +3,8 @@
  * @author anna michelitch
  */
 
+package designer;
+
     /**
      * calls the CharacterDecorator constructor to duplicate the character to be modified and
      * then customizes a specific section to add the hat

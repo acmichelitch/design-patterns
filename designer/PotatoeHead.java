@@ -3,6 +3,8 @@
  * @author anna michelitch
  */
 
+package designer;
+
 public class PotatoeHead extends Character {
     
     /**
