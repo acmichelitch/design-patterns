@@ -1,3 +1,8 @@
+/**
+ * iterates over an array of flights for an airline
+ * @author anna michelitch
+ */
+
 package iterator;
 
 import java.util.ArrayList;
@@ -8,6 +13,10 @@ public class FlightIterator implements Iterator {
     private Flight[] flights;
     private int position;
 
+    /**
+     * constructor for the Flight Iterator
+     * @param flights
+     */
     public FlightIterator(Flight[] flights) {
         this.flights = flights;
         position = 0;
