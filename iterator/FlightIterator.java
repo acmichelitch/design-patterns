@@ -9,14 +9,22 @@ public class FlightIterator implements Iterator {
     private int position;
 
     public FlightIterator(Flight[] flights) {
-        //TODO: implement constructor
+        this.flights = flights;
+        position = 0;
     }
 
     public boolean hasNext() {
-        return false;
+        if (flights[position] == null)
+            return false;
+        return true;
     }
 
     public Flight next() {
-        return null;
+        if (this.hasNext()) {
+            position++;
+            return flights[position-1];
+        }
+        else
+            return null;
     }
 }
