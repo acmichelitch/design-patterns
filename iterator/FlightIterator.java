@@ -5,7 +5,6 @@
 
 package iterator;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class FlightIterator implements Iterator {
@@ -15,19 +14,25 @@ public class FlightIterator implements Iterator {
 
     /**
      * constructor for the Flight Iterator
-     * @param flights
+     * @param flights the array of flights
      */
     public FlightIterator(Flight[] flights) {
         this.flights = flights;
         position = 0;
     }
 
+    /**
+     * checks whether another non-null element exists in the array
+     * @return if there is another existing element that hasn't yet been returned
+     */
     public boolean hasNext() {
-        if (flights[position] == null)
-            return false;
-        return true;
+        return (flights[position] != null);
     }
 
+    /**
+     * returns the next existing element in the array
+     * @return the next element in the array that hasn't been returned yet; returns null if nothing else exists
+     */
     public Flight next() {
         if (this.hasNext()) {
             position++;
