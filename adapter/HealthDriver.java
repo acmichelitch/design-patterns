@@ -36,7 +36,7 @@ public class HealthDriver {
         System.out.println(medRecord);
 
         HealthRecord record = new CarolinaHealthRecord("Bob", "White", makeDate(2008, 8, 10), "Male");
-     /*   MedicalRecord myRecord = new MedicalRecordAdapter(record);
+        MedicalRecord myRecord = new MedicalRecordAdapter(record);
         record.addHistory(makeDate(2008, 8, 12), true, "Entering the world wonderfully");
         record.addHistory(makeDate(2008, 9, 12), true, "1 Month Checkup, everything is strong.");
         record.addHistory(makeDate(2008, 11, 28), false, "Suffering from the croup, gave sterroids");
@@ -46,7 +46,7 @@ public class HealthDriver {
         myRecord.addVisit(makeDate(2010, 8, 11), true, "2 year, and growing strong");
         myRecord.addVisit(makeDate(2011, 8, 10), true, "3 year, and growing strong");
         System.out.println(myRecord);
-*/
+
         System.out.println("Previous display prior to adapting the new system.");
         System.out.print(record);
 
