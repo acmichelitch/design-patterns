@@ -50,14 +50,30 @@ public class MedicalRecordAdapter implements MedicalRecord {
             //parse through visits and add a new visit
             String visit = visitHistory.get(i);
             String[] visitString = visit.split("\n");
-            
-            //parse through visits
+
+            //get date
             String dateLine = visitString[0];
+            SimpleDateFormat formatter = new SimpleDateFormat("E dd, MM, yyyy");
+            String[] dateLineArr = dateLine.split(": ");
+            Date date = null;
+            try {
+            date = formatter.parse(dateLineArr[1]);
+            }
+            catch (ParseException e) {
+                e.printStackTrace();
+            }
+            
+            //get boolean well/sick
             String wellLine = visitString[1];
+            String[] wellLineArr = wellLine.split(": ");
+            boolean well = Boolean.parseBoolean(wellLineArr[1]);
+
+            //get comments
             String commentLine = visitString[2];
-            System.out.println("DATELINE: " + dateLine);
-            System.out.println("WELLLINE: " + wellLine);
-            System.out.println("COMMENTLINE: " + commentLine);
+            String[] commentLineArr = commentLine.split(": ");
+            String comment = commentLineArr[1];
+
+            visits.add(new Visit(date, well, comment));
         }
         return visits;
     }
@@ -68,8 +84,16 @@ public class MedicalRecordAdapter implements MedicalRecord {
         result += "Birthday: " + simpleDateFormat.format(record.getBirthdate()) + "\n";
         result += "Gender: " + record.getGender() +"\n";
         result += "Medical Visit History: \n";
+
         ArrayList<Visit> visits = getVisitHistory();
-        //print medical visit history
+        if (visits.size() == 0) {
+            result += "No visits yet";
+        }
+        else {
+            for (Visit visit : visits) {
+                result += visit.toString() + "\n";
+            }
+        }
         return result;
     }
 
